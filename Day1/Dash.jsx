@@ -1,6 +1,7 @@
 import React from "react";
-
+import { useNavigate } from "react-router-dom";
 export default function Dash() {
+    const nav = useNavigate();
     return (
         <div>
             <div class="relative h-screen overflow-hidden bg-indigo-900">
@@ -34,11 +35,11 @@ export default function Dash() {
                                 <a class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
                                     About us
                                 </a>
-                                <a class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
-                                    Calendar
+                                <a onClick={() => nav('/Profile')} class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
+                                    Profile
                                 </a>
-                                <a class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
-                                    Contact us
+                                <a onClick={() => nav('/')} class="mx-3 text-lg text-white uppercase cursor-pointer hover:text-gray-300">
+                                    Logout
                                 </a>
                             </div>
                         </div>
